@@ -1,0 +1,387 @@
+:root {
+	--thin-font: 100;
+	--light-font: 300;
+	--regular-font: 400;
+	--primary-font-color: #ffffff;
+	--secondary-font-color: #262626;
+	--tertiary-font-color: #bbbbbb;
+	--primary-background-color: #ffffff;
+	--secondary-background-color: #fffaf8;
+	--tertiary-background-color: #262626;
+	--html-color: #fc8f54;
+	--css-color: #7695ff;
+	--container-padding-x: 150px;
+	--container-padding-y: 70px;
+	--nav-padding-y: 20px;
+	--spacing: 20px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	text-decoration: none;
+	list-style: none;
+	/* outline: solid 1px red; */
+}
+
+.app {
+	position: relative;
+}
+
+.font-xm {
+	font-size: 0.75rem;
+}
+
+.font-sm {
+	gap: calc(var(--spacing) * 4);
+	font-size: 1rem;
+}
+
+.font-md {
+	font-size: 1.5rem;
+}
+
+.font-lg {
+	font-size: 2rem;
+}
+
+.font-xl {
+	font-size: 3rem;
+}
+
+.font-color-primary {
+	color: var(--primary-font-color);
+}
+
+.font-color-secondary {
+	color: var(--secondary-font-color);
+}
+
+.font-color-tertiary {
+	color: var(--tertiary-font-color);
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button {
+	padding: 10px 20px;
+	border-radius: 15px;
+	border: none;
+}
+
+.button-primary {
+	background-color: var(--tertiary-background-color);
+	color: var(--primary-font-color);
+}
+
+.button:hover {
+	cursor: pointer;
+	background-color: var(--tertiary-font-color);
+}
+
+.button-secondary {
+	background-color: var(--primary-background-color);
+	color: var(--secondary-font-color);
+	border: 1px solid var(--tertiary-font-color);
+}
+
+.divider {
+	width: 100%;
+	min-height: 1px;
+	height: 1px;
+	margin: var(--spacing) 0;
+	background-color: var(--tertiary-font-color);
+}
+
+.margin {
+	margin: var(--spacing);
+}
+
+.margin-bottom {
+	margin-bottom: var(--spacing);
+}
+
+.margin-top {
+	margin-top: var(--spacing);
+}
+
+.margin-left {
+	margin-left: var(--spacing);
+}
+
+.margin-right {
+	margin-right: var(--spacing);
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-start {
+	justify-content: start;
+}
+
+.justify-end {
+	justify-content: end;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-start {
+	align-items: start;
+}
+
+.align-end {
+	align-items: end;
+}
+
+.gap {
+	gap: var(--spacing);
+}
+
+/* Tooltip container */
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	width: 120px;
+	bottom: 120%;
+	left: 50%;
+	margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+	visibility: hidden;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+.container {
+	padding: var(--container-padding-y) var(--container-padding-x);
+}
+
+#navigation {
+	position: sticky;
+	top: 0;
+	background-color: var(--primary-background-color);
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing);
+	padding: var(--nav-padding-y) var(--container-padding-x);
+}
+
+.nav-logo {
+	width: 60px;
+	height: 60px;
+	color: var(--primary-font-color);
+	background-color: var(--tertiary-background-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.nav-list {
+	list-style-type: none;
+	display: flex;
+	gap: 30px;
+}
+
+.nav-item:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: var(--secondary-font-color);
+}
+
+.about {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: calc(var(--spacing) * 4);
+}
+
+.about div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.about-left {
+	gap: var(--spacing);
+}
+
+.about-left-image {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.about-left-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.about-right {
+	gap: var(--spacing);
+}
+
+.about-right-actions {
+	display: flex;
+	flex-direction: row !important;
+	justify-content: start !important;
+	align-items: center;
+	gap: var(--spacing);
+}
+
+.about-right-actions button {
+	width: 150px;
+}
+
+.ed-skills-section {
+	background-color: var(--secondary-background-color);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: calc(var(--spacing) * 4);
+}
+
+.skills-list {
+	display: flex;
+	gap: var(--spacing);
+}
+
+.skills-item {
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary-background-color);
+	padding: 10px var(--spacing);
+}
+
+.skills-item i {
+	font-size: 3rem;
+}
+
+.html-icon {
+	color: var(--html-color);
+}
+
+.css-icon {
+	color: var(--css-color);
+}
+
+.education-timeline-item {
+	margin-bottom: var(--spacing);
+}
+
+.education-timeline-item .icon {
+	background-color: var(--primary-background-color);
+}
+
+.navigate-to-top {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--secondary-font-color);
+	border: 1px solid var(--tertiary-font-color);
+	border-radius: 50%;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	cursor: pointer;
+}
+
+.navigate-to-top:hover {
+	background-color: var(--tertiary-font-color);
+}
+
+.navigate-to-top i {
+	color: var(--secondary-font-color);
+}
+
+#footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#footer .footer-header,
+.footer-socials {
+	margin-bottom: var(--spacing);
+}
+
+#footer .footer-socials .footer-social-item {
+	margin-bottom: calc(var(--spacing) / 2);
+}
+
+#footer .footer-socials .footer-social-item a {
+	color: var(--secondary-font-color);
+}
+
+#footer .footer-socials .footer-social-item a:hover {
+	text-decoration: underline;
+}
+
+@media (width < 768px) {
+	.container {
+		padding: var(--container-padding-y) var(--spacing);
+	}
+
+	.about {
+		grid-template-columns: 1fr;
+		gap: var(--spacing);
+	}
+
+	.ed-skills-section {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

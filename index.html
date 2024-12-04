@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Portfolio</title>
+		<script
+			src="https://kit.fontawesome.com/a15ff02c89.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/style.css"
+		/>
+		<script>
+			window.onload = () => {
+				const downloadCvButton = document.getElementById("download-cv");
+				downloadCvButton.addEventListener("click", () => {
+					const link = document.createElement("a");
+					link.href = "./assets/img/CV-iris.png";
+					link.download = "CV-iris.png";
+					link.click();
+					link.remove();
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<!-- navigations -->
+		<div class="app">
+			<div
+				id="navigation"
+				class="container nav"
+			>
+				<div class="nav-logo">I.S</div>
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="#navigation"
+							>About</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="#education"
+							>Education</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="#skills"
+							>Skills</a
+						>
+					</li>
+				</ul>
+			</div>
+			<div
+				id="about"
+				class="container about"
+			>
+				<div class="about-left">
+					<div class="about-left-image">
+						<img src="./assets/img/iris-image.PNG" />
+					</div>
+					<p class="font-xl">Hello, I'm Iris Salazar</p>
+				</div>
+				<div class="about-right">
+					<p class="font-lg">
+						An IT student based in Baguio, Philippines.
+					</p>
+					<p class="font-color-tertiary">
+						Passionate creating great experience for web development
+					</p>
+					<div class="about-right-actions">
+						<button
+							class="button button-primary"
+							id="download-cv"
+						>
+							DOWNLOAD CV
+						</button>
+						<button class="button button-secondary">
+							CONTACT ME
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="container ed-skills-section">
+				<div
+					id="education"
+					class="education"
+				>
+					<p class="font-lg margin-bottom">Education</p>
+					<ul class="education-timeline">
+						<li class="education-timeline-item">
+							<div class="flex align-center gap">
+								<div class="icon">
+									<i class="fa-solid fa-school"></i>
+								</div>
+								<div>
+									<p>Elementary</p>
+									<p class="font-color-tertiary">
+										Udiao Elementary School
+									</p>
+								</div>
+							</div>
+							<div class="divider" />
+						</li>
+						<li class="education-timeline-item">
+							<div class="flex align-center gap">
+								<div class="icon">
+									<i class="fa-solid fa-school"></i>
+								</div>
+								<div>
+									<p>High school</p>
+									<p class="font-color-tertiary">
+										Rosario Integrated School
+									</p>
+								</div>
+							</div>
+							<div class="divider" />
+						</li>
+						<li class="education-timeline-item">
+							<div class="flex align-center gap">
+								<div class="icon">
+									<i class="fa-solid fa-school"></i>
+								</div>
+								<div>
+									<p>Senior high school</p>
+									<p class="font-color-tertiary">
+										University of the cordilleras
+									</p>
+								</div>
+							</div>
+							<div class="divider" />
+						</li>
+						<li class="education-timeline-item">
+							<div class="flex align-center gap">
+								<div class="icon">
+									<i class="fa-solid fa-school"></i>
+								</div>
+								<div>
+									<p>College</p>
+									<p class="font-color-tertiary">
+										University of the cordilleras
+									</p>
+								</div>
+							</div>
+							<div class="divider" />
+						</li>
+					</ul>
+				</div>
+				<div id="skills">
+					<p class="font-lg margin-bottom">Skills</p>
+					<ul class="skills-list">
+						<li class="skills-item">
+							<i class="html-icon fa-brands fa-html5"></i>
+							<p>HTML</p>
+						</li>
+						<li class="skills-item">
+							<i class="css-icon fa-brands fa-css3-alt"></i>
+							<p>CSS</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div
+				id="footer"
+				class="container"
+			>
+				<div class="footer-header">Socials</div>
+				<ul class="footer-socials">
+					<li class="footer-social-item">
+						<a
+							href="https://www.facebook.com/almoiteiris21"
+							target="_blank"
+							><i class="fa-brands fa-facebook"></i> Iris
+							Salazar</a
+						>
+					</li>
+					<li class="footer-social-item">
+						<a
+							href="https://www.instagram.com/grl.ixh/"
+							target="_blank"
+							><i class="fa-brands fa-square-instagram"></i>
+							pretty_ixh</a
+						>
+					</li>
+					<li class="footer-social-item">
+						<i class="fa-solid fa-envelope"></i>
+						airissalazar0121@gmail.com
+					</li>
+				</ul>
+				<p>© 2024, by Iris Salazar</p>
+			</div>
+
+			<div class="tooltip navigate-to-top">
+				<span class="tooltiptext">Navigate to top</span>
+				<a
+					class="navigate-to-top"
+					href="#navigation"
+				>
+					<i class="fa-solid fa-arrow-up"></i>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

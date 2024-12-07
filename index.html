@@ -28,6 +28,11 @@
 			rel="stylesheet"
 			href="./css/style.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<script src="https://unpkg.com/smtp.js/dist/smtp.min.js"></script>
 		<script>
 			window.onload = () => {
 				const downloadCvButton = document.getElementById("download-cv");
@@ -37,6 +42,34 @@
 					link.download = "CV-iris.png";
 					link.click();
 					link.remove();
+				});
+
+				const containers = document.querySelectorAll(".container");
+				console.log("containers", containers);
+				containers.forEach((container, index) => {
+					if (
+						!container.classList.contains("nav") ||
+						container.id === "footer"
+					) {
+						console.log("index", index);
+						container.classList.add(
+							"animate__animated",
+							"animate__fadeIn",
+							`animate__delay-${index}s`
+						);
+					}
+				});
+
+				const contactMeBtn = document.getElementById("contact-me");
+				contactMeBtn.addEventListener("click", () => {
+					// Get the text field
+					var copyText = document.getElementById("contact");
+
+					// Copy the text inside the text field
+					navigator.clipboard.writeText(copyText.innerText);
+
+					// Alert the copied text
+					alert(copyText.innerText + " copied to clipboard");
 				});
 			};
 		</script>
@@ -85,15 +118,10 @@
 				</div>
 				<div class="about-right">
 					<p class="font-lg">
-						Welcome to My Portfolio!
+						An IT student based in Baguio, Philippines.
 					</p>
 					<p class="font-color-tertiary">
-						I’ve always had a passion for creativity and technology, and I’m lucky enough to be able to blend both in my work every day. 
-						Creating simple websites that express an idea and capture each client's own concept is a task I greatly enjoy. The way I work 
-						focuses on developing smooth, user-friendly experiences that facilitate customer engagement. Whether it's creating a sophisticated 
-						website or maintaining a creative professional's portfolio, I give each project the full effort. 
-
- 
+						Passionate creating great experience for web development
 					</p>
 					<div class="about-right-actions">
 						<button
@@ -102,9 +130,18 @@
 						>
 							DOWNLOAD CV
 						</button>
-						<button class="button button-secondary">
+						<button
+							class="button button-secondary"
+							id="contact-me"
+						>
 							CONTACT ME
 						</button>
+						<p
+							id="contact"
+							style="display: none"
+						>
+							airissalazar0121@gmail.com
+						</p>
 					</div>
 				</div>
 			</div>

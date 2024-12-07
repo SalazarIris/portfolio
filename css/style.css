@@ -194,6 +194,7 @@
 }
 
 .container {
+	position: relative;
 	padding: var(--container-padding-y) var(--container-padding-x);
 }
 
@@ -302,6 +303,11 @@
 	align-items: center;
 	background-color: var(--primary-background-color);
 	padding: 10px var(--spacing);
+	transition: transform 0.3s ease-in-out;
+}
+
+.skills-item:hover {
+	transform: scale(1.05);
 }
 
 .skills-item i {
@@ -318,6 +324,11 @@
 
 .education-timeline-item {
 	margin-bottom: var(--spacing);
+	transition: transform 0.3s ease-in-out;
+}
+
+.education-timeline-item:hover {
+	transform: scale(1.05);
 }
 
 .education-timeline-item .icon {
